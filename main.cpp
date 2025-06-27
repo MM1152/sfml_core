@@ -1,15 +1,17 @@
-#include <iostream>
-#include "InputMgr.h"
-#include "SFML/Graphics.hpp"
-#include "ResourceMgr.h"
-
-
+#include "stdafx.h"
+#include "SpriteGo.h"
+#include "TextGo.h"
+#include "SceneGame.h"
 int main() 
-{
+{	
 	sf::RenderWindow window(sf::VideoMode(1920, 1080), "Timber");
-	ResourceMgr<sf::Texture>::instance().Load("player.png");
-	sf::Sprite sp;
-	sp.setTexture(ResourceMgr<sf::Texture>::instance().Get("player.png"));
+
+	TEXTURE_MGR.Load("player.png");
+	FONT_MGR.Load("KOMIKAP_.ttf");
+	SceneGame scGame;
+	scGame.Init();
+	scGame.Enter();
+
 	while (window.isOpen()) {
 		sf::Event event;
 
@@ -25,20 +27,14 @@ int main()
 
 		//Update
 		InputMgr::Update(0);
-
-		if (InputMgr::GetKeyDown(sf::Keyboard::A)) {
-			std::cout << "Key Down: A" << std::endl;
-		}
-		if (InputMgr::GetKeyUp(sf::Keyboard::A)) {
-			std::cout << "Key Up: A" << std::endl;
-		}
-		
-
+		scGame.Update(0);
 		//Draw
 		window.clear();
-		window.draw(sp);
+		scGame.Draw(window);
 		window.display();
 	}
+
+	scGame.Release();
 
 	return 0;
 }

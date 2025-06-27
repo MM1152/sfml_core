@@ -1,5 +1,8 @@
+#include "stdafx.h"
 #include "InputMgr.h"
-#include <algorithm>
+
+#include <SFML/Window/Keyboard.hpp>
+#include <SFML/Window/Event.hpp>
 
 std::list <sf::Keyboard::Key> InputMgr::downKeys;
 std::list <sf::Keyboard::Key> InputMgr::holdKeys;

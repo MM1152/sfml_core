@@ -13,21 +13,75 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="FrameWork">
+      <UniqueIdentifier>{714f9ac0-9fa5-467c-804b-6108dbafb95c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\Header">
+      <UniqueIdentifier>{f23fc5d9-d218-4c40-ab89-5e1305c304d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\Cpp">
+      <UniqueIdentifier>{b076016b-cc44-47dd-bf48-2b86210f10f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="InputMgr.cpp">
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Cpp\GameObject.cpp">
+      <Filter>FrameWork\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Cpp\InputMgr.cpp">
+      <Filter>FrameWork\Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Cpp\SpriteGo.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Cpp\Utils.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Cpp\TextGo.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGame.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InputMgr.h">
+    <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton.h">
+    <ClInclude Include="FrameWork\Header\GameObject.h">
+      <Filter>FrameWork\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Header\InputMgr.h">
+      <Filter>FrameWork\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Header\ResourceMgr.h">
+      <Filter>FrameWork\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Header\Singleton.h">
+      <Filter>FrameWork\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Header\SpriteGo.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ResourceMgr.h">
+    <ClInclude Include="FrameWork\Header\Defines.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Header\Utils.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameWork\Header\TextGo.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGame.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

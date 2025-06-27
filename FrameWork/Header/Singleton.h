@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+
 template <typename T>
 class Singleton {
 protected:
@@ -18,6 +18,8 @@ public:
 		// 정적 지역변수가 쓰레드 환경에서 안전을 보장해준다고 생각하면된다.
 		static T instance; 
 		return instance;
+
+		
 	}
 	void print() {
 		std::cout << " asd" << std::endl;

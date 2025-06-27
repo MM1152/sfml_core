@@ -113,7 +113,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>SFML-2.6.2\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\SFML-2.6.2\include;.\FrameWork\Header;$(ProjectDir);.\FrameWork\Cpp</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,13 +143,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InputMgr.cpp" />
+    <ClCompile Include="FrameWork\Cpp\GameObject.cpp" />
+    <ClCompile Include="FrameWork\Cpp\InputMgr.cpp" />
+    <ClCompile Include="FrameWork\Cpp\TextGo.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="FrameWork\Cpp\SpriteGo.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneGame.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FrameWork\Cpp\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InputMgr.h" />
-    <ClInclude Include="ResourceMgr.h" />
-    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="FrameWork\Header\Defines.h" />
+    <ClInclude Include="FrameWork\Header\GameObject.h" />
+    <ClInclude Include="FrameWork\Header\InputMgr.h" />
+    <ClInclude Include="FrameWork\Header\ResourceMgr.h" />
+    <ClInclude Include="FrameWork\Header\Singleton.h" />
+    <ClInclude Include="FrameWork\Header\SpriteGo.h" />
+    <ClInclude Include="FrameWork\Header\TextGo.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneGame.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="FrameWork\Header\Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

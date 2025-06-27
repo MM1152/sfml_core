@@ -1,6 +1,4 @@
 #pragma once
-#include <unordered_map>
-#include <utility>
 #include "Singleton.h"
 
 template <typename T>
@@ -34,11 +32,19 @@ public:
 		T* res = new T();
 		bool success = res->loadFromFile(filePathid);
 		if (!success) {
+			std::cout << "FAIL" << std::endl;
+			delete res;
 			return false;
 		}
 
+		std::cout << "True" << std::endl;
 		resources.insert({ filePathid , res });
 		return true;
+	}
+	void Load(const std::vector<std::string>& filePathid) {
+		for (const std::string& i : filePathid) {
+			Load(i);
+		}
 	}
 	bool UnLoad(std::string& id) {
 		auto it = resources.find(id);
@@ -61,3 +67,7 @@ public:
 
 template<typename T>
 T ResourceMgr<T>::Empty;
+
+#define TEXTURE_MGR (ResourceMgr<sf::Texture>::instance())
+#define FONT_MGR (ResourceMgr<sf::Font>::instance())
+#define SOUNDBUFFER_MGR (ResourceMgr<sf::SoundBuffer>::instance())
